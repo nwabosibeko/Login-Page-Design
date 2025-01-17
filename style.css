@@ -18,7 +18,7 @@ html{
 }
 body{
     min-height: 100vh;
-    background-image: url(images/pexels-mart-production-7890120.jpg);
+    background-image: url(./images/pexels-antonio-filigno-159809-8538299.jpg);
     background-size: cover;
     background-position: right;
     overflow: hidden;
@@ -76,7 +76,43 @@ form input{
     padding: 1em;
     font: inherit;
     border-radius: 0 10px 10px 0;
-    border: none;
+    border: 2px solid var(--input-color);
+    border-left: none;
     background-color: var(--input-color);
+    transition: 150ms ease;
 
 }
+form input:hover{
+    border-color: var(--accent-color);
+}
+
+form input:focus{
+    outline: none;
+    border-color: var(--text-color);
+}
+div:has(input:focus) > label{
+    background-color: var(--text-color);
+}
+form input::placeholder{
+    color: grey;
+}
+form button{
+    margin-top: 10px;
+    border: none;
+    border-radius: 1000px;
+    padding: .85em 4em;
+    background-color: var(--accent-color);
+    font: inherit;
+    font-weight: bolder;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+form button:hover{
+    background-color: var(--text-color);
+
+}
+form button:focus{
+    outline: none;
+    background-color: var(--text-color);
+}
+
